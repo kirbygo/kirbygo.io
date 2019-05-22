@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Intro</title>
+        <title>Interactive&nbsp;Resume</title>
         <meta charset="utf-8" />
         <link href="https://buhrmann.github.io/theme/css/bootstrap-custom.css" rel="stylesheet"/> 
     	<link href="https://buhrmann.github.io/theme/css/pygments.css" rel="stylesheet"/>     
@@ -11,16 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link href="https://buhrmann.github.io/theme/css/d3.css" rel="stylesheet" />
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-56071357-1', 'auto');
-  ga('send', 'pageview');
-
-</script>    </head>
+    </head>
 
     <body>
     <div class="wrap">
@@ -81,10 +72,45 @@
             </div><!-- header -->
         </div><!-- container-fluid -->
 
-<header class="intro">
-    <h1>Thomas Buhrmann <br><small>Postdoctoral researcher in embodied cognition and data science enthusiast. </small></h1>
-<div id="taggraph" class="svgfloat"></div>
-</header>
+        <div class="container main-content">     
+            <div class="row row-centered">
+                <div class="col-centered col-max col-min col-sm-12 col-md-10 col-lg-10 main-content">
+<section id="content" class="content">
+    <h1>Interactive&nbsp;Resume</h1>
+    <p>I&#8217;m a computer scientist with 8 years of academic and commercial experience in the areas of artificial intelligence and machine learning. My academic output primarily deals with the evolutionary optimization of neural networks to understand cognitive functions. Outside of academia I spent more than 4 years developing and managing the development of commercial <span class="caps">AI</span> software at NaturalMotion (a provider of middleware solutions to some of the world&#8217;s biggest computer game studios, such as Rockstar and Lucasarts). I&#8217;m now looking to apply my skills and experience in the field of data science and big data. I&#8217;ve worked on both back-end (<span class="caps">SQL</span>, NoSql such as MongoDB or Neo4j, Hadoop, Flume, Hive, etc.) and front-end (javascript and R/shiny-based data visualizations and python web apps). I&#8217;m  comfortable programming in C++, Python, R or javascript and regular use R and scikit-learn for machine learning projects (see this blog for non-academic&nbsp;samples).</p>
+<p>Find a printer-friendly <a href="http://bit.ly/1UEi7dF" target="_blank">pdf resume here</a>.</p>
+<h3>Experience</h3>
+<p>For a full resume also see my <a href="https://www.linkedin.com/in/thomasbuhrmann" target="_blank">LinkedIn</a> account.
+<div id="timeline-exp"></div></p>
+<h3>Education</h3>
+<p><div id="timeline-ed"></div></p>
+<h3>Publications</h3>
+<p>A list of my publications. For the data used in this graph I&#8217;ve written a little python robot to scrape articles and citations off of <a href="http://scholar.google.es/citations?user=M1FQwSUAAAAJ&hl=en">google scholar</a>. The <a href="https://github.com/synergenz/datawerk/blob/master/theme/static/py/citations.py">source code</a> is available on <a href="https://github.com/synergenz/">github</a> along with the rest of this <a href="https://github.com/synergenz/datawerk">blog</a>.</p>
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#stream" role="tab" data-toggle="tab">Stream</a></li>
+  <li><a href="#stack" role="tab" data-toggle="tab">Stack</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="stream">
+      <span class="capCenter">Each colored stream represents a single publication&#8217;s number of citations over the years.</span>
+  </div>
+  <div class="tab-pane" id="stack">
+      <span class="capCenter">Each colored rectangle represents the number of citations for a given publication in a given year.</span>
+  </div>
+</div>
+
+<h4>All&nbsp;publications</h4>
+<p>As found on google scholar. Number of citations in&nbsp;brackets.</p>
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <ul class="bib" id="list" style="margin-top: 15px;"></ul>
+    </div>
+</div>
+</section>    
+                </div>
+            </div><!-- row-->
+        </div><!-- container -->
 
         <!-- <div class="push"></div> -->
     </div> <!-- wrap -->
@@ -203,7 +229,11 @@ jQuery(document).ready(function($)
 
 <script type="text/javascript" src="https://buhrmann.github.io/theme/js/d3.v3.min.js"></script>
 <script type="text/javascript" src="https://buhrmann.github.io/theme/js/colorbrewer.v1.min.js"></script>
-<script type="text/javascript" src="https://buhrmann.github.io/theme/js/intro.js"></script>
-<script type="text/javascript">tagGraph("#taggraph");</script>
+<script type="text/javascript" src="https://buhrmann.github.io/theme/js/timeline.js"></script>
+<script type="text/javascript" src="https://buhrmann.github.io/theme/js/pubStack.js"></script>
+<script type="text/javascript">timelineFromJson("Paired");</script>
+<script type="text/javascript">streamCsv("#stream", "Paired");</script>
+<script type="text/javascript">pubsBars("#stack", "Paired");</script>
+<script type="text/javascript">pubsList("#list");</script>
 </body>
 </html>
