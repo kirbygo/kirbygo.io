@@ -1,7 +1,209 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hola Putitos</h1>
-<p>Estoy en GitHub jijiji.</p>
+    <head>
+        <title>Intro</title>
+        <meta charset="utf-8" />
+        <link href="https://buhrmann.github.io/theme/css/bootstrap-custom.css" rel="stylesheet"/> 
+    	<link href="https://buhrmann.github.io/theme/css/pygments.css" rel="stylesheet"/>     
+        <link href="https://buhrmann.github.io/theme/css/style.css" rel="stylesheet" />
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="https://buhrmann.github.io/theme/css/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link href="https://buhrmann.github.io/theme/css/d3.css" rel="stylesheet" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56071357-1', 'auto');
+  ga('send', 'pageview');
+
+</script>    </head>
+
+    <body>
+    <div class="wrap">
+        <div class="container-fluid">
+            <div class="header">
+                <div class="container">
+                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="https://buhrmann.github.io">
+                                <!-- <span class="fa fa-pie-chart navbar-logo"></span> datawerk -->
+                                <span class="navbar-logo"><img src="https://buhrmann.github.io/theme/css/logo.png" style=""></img></span>
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <!--<li><a href="https://buhrmann.github.io/archives.html">Archives</a></li>-->
+                                <li><a href="https://buhrmann.github.io/posts.html">Blog</a></li>
+                                <li><a href="https://buhrmann.github.io/pages/cv.html">Interactive CV</a></li>
+                                <li class="dropdown">                                    
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Reports<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <!--<li class="divider"></li>
+                                        <li class="dropdown-header">Data Science Reports</li>-->
+                                        <li >
+                                        <a href="https://buhrmann.github.io/p2p-loans.html">Interest rates on <span class="caps">P2P</span>&nbsp;loans</a>
+                                        </li>
+                                        <li >
+                                        <a href="https://buhrmann.github.io/activity-data.html">Categorisation of inertial activity&nbsp;data</a>
+                                        </li>
+                                        <li >
+                                        <a href="https://buhrmann.github.io/titanic-survival.html">Titanic survival&nbsp;prediction</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">                                    
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Apps<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <!--<li class="divider"></li>
+                                        <li class="dropdown-header">Data Science Reports</li>-->
+                                        <li >
+                                        <a href="https://buhrmann.github.io/elegans.html">C. elegans connectome&nbsp;explorer</a>
+                                        </li>
+                                        <li >
+                                        <a href="https://buhrmann.github.io/dash+.html">Dash+ visualization of running&nbsp;data</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div><!-- header -->
+        </div><!-- container-fluid -->
+
+<header class="intro">
+    <h1>Thomas Buhrmann <br><small>Postdoctoral researcher in embodied cognition and data science enthusiast. </small></h1>
+<div id="taggraph" class="svgfloat"></div>
+</header>
+
+        <!-- <div class="push"></div> -->
+    </div> <!-- wrap -->
+
+    <div class="container-fluid aw-footer">
+		<div class="row-centered">
+			<div class="col-sm-3 col-sm-offset-1">
+				<h4>Author</h4>
+				<ul class="list-unstyled my-list-style">
+					<li><a href="http://www.ias-research.net/people/thomas-buhrmann/">Academic Home</a></li>
+					<li><a href="http://github.com/synergenz">Github</a></li>
+					<li><a href="http://www.linkedin.com/in/thomasbuhrmann">LinkedIn</a></li>
+					<li><a href="https://secure.flickr.com/photos/syngnz/">Flickr</a></li>                            
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4>Categories</h4>
+				<ul class="list-unstyled my-list-style">
+					<li><a href="https://buhrmann.github.io/category/academia.html">Academia (4)</a></li>
+					<li><a href="https://buhrmann.github.io/category/data-apps.html">Data Apps (2)</a></li>
+					<li><a href="https://buhrmann.github.io/category/data-posts.html">Data Posts (9)</a></li>
+					<li><a href="https://buhrmann.github.io/category/reports.html">Reports (3)</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4>Tags</h4>
+                <ul class="tagcloud">
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/shiny.html">shiny</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/networks.html">networks</a></li>
+                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/sql.html">sql</a></li>
+                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/hadoop.html">hadoop</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/mongodb.html">mongodb</a></li>
+                        <li class="tag-1"><a href="https://buhrmann.github.io/tag/visualization.html">visualization</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/smcs.html">smcs</a></li>
+                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/sklearn.html">sklearn</a></li>
+                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/tf-idf.html">tf-idf</a></li>
+                        <li class="tag-1"><a href="https://buhrmann.github.io/tag/r.html">R</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/sna.html">sna</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/nosql.html">nosql</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/svm.html">svm</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/java.html">java</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/hive.html">hive</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/scraping.html">scraping</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/lda.html">lda</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/kaggle.html">kaggle</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/exploratory.html">exploratory</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/titanic.html">titanic</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/classification.html">classification</a></li>
+                        <li class="tag-1"><a href="https://buhrmann.github.io/tag/python.html">python</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/random-forest.html">random forest</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/text.html">text</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/big-data.html">big data</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/report.html">report</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/regression.html">regression</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/graph.html">graph</a></li>
+                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/d3.html">d3</a></li>
+                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/neo4j.html">neo4j</a></li>
+                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/flume.html">flume</a></li>
+                </ul>
+			</div>
+		</div>
+    </div>
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) 
+{
+	$("div.collapseheader").click(function () {
+		$header = $(this).children("span").first();
+		$codearea = $(this).children(".input_area");
+		$codearea.slideToggle(500, function () {
+			$header.text(function () {
+				return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+			});
+		});
+	});
+
+
+    // $(window).resize(function(){
+    //     var footerHeight = $('.aw-footer').outerHeight();
+    //     var stickFooterPush = $('.push').height(footerHeight);  
+    //     $('.wrap').css({'marginBottom':'-' + footerHeight + 'px'});
+    // });     
+
+    // $(window).resize();
+
+    // $(window).bind("load resize", function() {    
+    //     var footerHeight = 0,
+    //         footerTop = 0,
+    //         $footer = $(".aw-footer");
+
+    //     positionFooter();
+
+    //     function positionFooter() {
+
+    //         footerHeight = $footer.height();
+    //         footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+    //         console.log(footerHeight, footerTop);
+    //         console.log($(document.body).height()+footerHeight, $(window).height());
+
+    //         if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+    //             $footer.css({ position: "absolute" }).css({ top: footerTop });
+    //             console.log("Positioning absolute");
+    //         }
+    //         else {
+    //             $footer.css({ position: "static" });
+    //             console.log("Positioning static");
+    //         }
+    //     }
+
+    //     $(window).scroll(positionFooter).resize(positionFooter);
+    // });
+});
+</script>
+
+<script type="text/javascript" src="https://buhrmann.github.io/theme/js/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://buhrmann.github.io/theme/js/colorbrewer.v1.min.js"></script>
+<script type="text/javascript" src="https://buhrmann.github.io/theme/js/intro.js"></script>
+<script type="text/javascript">tagGraph("#taggraph");</script>
 </body>
 </html>
