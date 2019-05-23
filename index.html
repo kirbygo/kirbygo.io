@@ -1,239 +1,300 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Interactive&nbsp;Resume</title>
-        <meta charset="utf-8" />
-        <link href="https://kirbygo.github.io/theme/css/bootstrap-custom.css" rel="stylesheet"/> 
-    	<link href="https://kirbygo.github.io/theme/css/pygments.css" rel="stylesheet"/>     
-        <link href="https://kirbygo.github.io/theme/css/style.css" rel="stylesheet" />
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="https://kirbygo.github.io/theme/css/logo.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html lang="en">
 
-<link href="https://kirbygo.github.io/theme/css/d3.css" rel="stylesheet" />
-    </head>
+<head>
 
-    <body>
-    <div class="wrap">
-        <div class="container-fluid">
-            <div class="header">
-                <div class="container">
-                    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="https://kirbygo.github.io">
-                                <!-- <span class="fa fa-pie-chart navbar-logo"></span> datawerk -->
-                                <span class="navbar-logo"><img src="https://kirbygo.github.io/theme/css/logo.png" style=""></img></span>
-                            </a>
-                        </div>
-                        <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <!--<li><a href="https://buhrmann.github.io/archives.html">Archives</a></li>
-                                <li><a href="https://buhrmann.github.io/posts.html">Blog</a></li>
-                                <li><a href="https://buhrmann.github.io/pages/cv.html">Interactive CV</a></li>-->
-                                <li class="dropdown">                                    
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Reports<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <!--<li class="divider"></li>
-                                        <li class="dropdown-header">Data Science Reports</li>
-                                        <li >
-                                        <a href="https://buhrmann.github.io/p2p-loans.html">Interest rates on <span class="caps">P2P</span>&nbsp;loans</a>
-                                        </li>
-                                        <li >
-                                        <a href="https://buhrmann.github.io/activity-data.html">Categorisation of inertial activity&nbsp;data</a>
-                                        </li>
-                                        <li >
-                                        <a href="https://buhrmann.github.io/titanic-survival.html">Titanic survival&nbsp;prediction</a>
-                                        </li>-->
-                                    </ul>
-                                </li>
-                                <li class="dropdown">                                    
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Apps<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <!--<li class="divider"></li>
-                                        <li class="dropdown-header">Data Science Reports</li>
-                                        <li >
-                                        <a href="https://buhrmann.github.io/elegans.html">C. elegans connectome&nbsp;explorer</a>
-                                        </li>
-                                        <li >
-                                        <a href="https://buhrmann.github.io/dash+.html">Dash+ visualization of running&nbsp;data</a>
-                                        </li>-->
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div><!-- header -->
-        </div><!-- container-fluid -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <div class="container main-content">     
-            <div class="row row-centered">
-                <div class="col-centered col-max col-min col-sm-12 col-md-10 col-lg-10 main-content">
-<section id="content" class="content">
-    <h1>Interactive&nbsp;Resume</h1>
-    <p>I&#8217;m a computer scientist with 8 years of academic and commercial experience in the areas of artificial intelligence and machine learning. My academic output primarily deals with the evolutionary optimization of neural networks to understand cognitive functions. Outside of academia I spent more than 4 years developing and managing the development of commercial <span class="caps">AI</span> software at NaturalMotion (a provider of middleware solutions to some of the world&#8217;s biggest computer game studios, such as Rockstar and Lucasarts). I&#8217;m now looking to apply my skills and experience in the field of data science and big data. I&#8217;ve worked on both back-end (<span class="caps">SQL</span>, NoSql such as MongoDB or Neo4j, Hadoop, Flume, Hive, etc.) and front-end (javascript and R/shiny-based data visualizations and python web apps). I&#8217;m  comfortable programming in C++, Python, R or javascript and regular use R and scikit-learn for machine learning projects (see this blog for non-academic&nbsp;samples).</p>
-<p>Find a printer-friendly <a href="http://bit.ly/1UEi7dF" target="_blank">pdf resume here</a>.</p>
-<h3>Experience</h3>
-<p>For a full resume also see my <a href="https://www.linkedin.com/in/kirbygo" target="_blank">LinkedIn</a> account.
-<div id="timeline-exp"></div></p>
-<h3>Education</h3>
-<p><div id="timeline-ed"></div></p>
-<h3>Publications</h3>
-<p>A list of my publications. For the data used in this graph I&#8217;ve written a little python robot to scrape articles and citations off of <a href="http://scholar.google.es/citations?user=M1FQwSUAAAAJ&hl=en">google scholar</a>. The <a href="https://github.com/synergenz/datawerk/blob/master/theme/static/py/citations.py">source code</a> is available on <a href="https://github.com/synergenz/">github</a> along with the rest of this <a href="https://github.com/kirbygo">blog</a>.</p>
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#stream" role="tab" data-toggle="tab">Stream</a></li>
-  <li><a href="#stack" role="tab" data-toggle="tab">Stack</a></li>
-</ul>
+  <title>Resume - Start Bootstrap Theme</title>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="stream">
-      <span class="capCenter">Each colored stream represents a single publication&#8217;s number of citations over the years.</span>
-  </div>
-  <div class="tab-pane" id="stack">
-      <span class="capCenter">Each colored rectangle represents the number of citations for a given publication in a given year.</span>
-  </div>
-</div>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<h4>All&nbsp;publications</h4>
-<p>As found on google scholar. Number of citations in&nbsp;brackets.</p>
-<div class="row">
-    <div class="col-sm-12 col-md-12">
-        <ul class="bib" id="list" style="margin-top: 15px;"></ul>
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Clarence Taylor</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+        </li>
+      </ul>
     </div>
-</div>
-</section>    
-                </div>
-            </div><!-- row-->
-        </div><!-- container -->
+  </nav>
 
-        <!-- <div class="push"></div> -->
-    </div> <!-- wrap -->
+  <div class="container-fluid p-0">
 
-    <div class="container-fluid aw-footer">
-		<div class="row-centered">
-			<div class="col-sm-3 col-sm-offset-1">
-				<h4>Author</h4>
-				<ul class="list-unstyled my-list-style">
-					<li><a href="http://www.ias-research.net/people/thomas-buhrmann/">Academic Home</a></li>
-					<li><a href="http://github.com/synergenz">Github</a></li>
-					<li><a href="http://www.linkedin.com/in/thomasbuhrmann">LinkedIn</a></li>
-					<li><a href="https://secure.flickr.com/photos/syngnz/">Flickr</a></li>                            
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<h4>Categories</h4>
-				<ul class="list-unstyled my-list-style">
-					<li><a href="https://buhrmann.github.io/category/academia.html">Academia (4)</a></li>
-					<li><a href="https://buhrmann.github.io/category/data-apps.html">Data Apps (2)</a></li>
-					<li><a href="https://buhrmann.github.io/category/data-posts.html">Data Posts (9)</a></li>
-					<li><a href="https://buhrmann.github.io/category/reports.html">Reports (3)</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<h4>Tags</h4>
-                <ul class="tagcloud">
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/shiny.html">shiny</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/networks.html">networks</a></li>
-                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/sql.html">sql</a></li>
-                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/hadoop.html">hadoop</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/mongodb.html">mongodb</a></li>
-                        <li class="tag-1"><a href="https://buhrmann.github.io/tag/visualization.html">visualization</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/smcs.html">smcs</a></li>
-                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/sklearn.html">sklearn</a></li>
-                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/tf-idf.html">tf-idf</a></li>
-                        <li class="tag-1"><a href="https://buhrmann.github.io/tag/r.html">R</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/sna.html">sna</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/nosql.html">nosql</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/svm.html">svm</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/java.html">java</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/hive.html">hive</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/scraping.html">scraping</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/lda.html">lda</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/kaggle.html">kaggle</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/exploratory.html">exploratory</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/titanic.html">titanic</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/classification.html">classification</a></li>
-                        <li class="tag-1"><a href="https://buhrmann.github.io/tag/python.html">python</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/random-forest.html">random forest</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/text.html">text</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/big-data.html">big data</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/report.html">report</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/regression.html">regression</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/graph.html">graph</a></li>
-                        <li class="tag-2"><a href="https://buhrmann.github.io/tag/d3.html">d3</a></li>
-                        <li class="tag-3"><a href="https://buhrmann.github.io/tag/neo4j.html">neo4j</a></li>
-                        <li class="tag-4"><a href="https://buhrmann.github.io/tag/flume.html">flume</a></li>
-                </ul>
-			</div>
-		</div>
-    </div>
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) 
-{
-	$("div.collapseheader").click(function () {
-		$header = $(this).children("span").first();
-		$codearea = $(this).children(".input_area");
-		$codearea.slideToggle(500, function () {
-			$header.text(function () {
-				return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
-			});
-		});
-	});
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Clarence
+          <span class="text-primary">Taylor</span>
+        </h1>
+        <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+          <a href="mailto:name@email.com">name@email.com</a>
+        </div>
+        <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <hr class="m-0">
 
-    // $(window).resize(function(){
-    //     var footerHeight = $('.aw-footer').outerHeight();
-    //     var stickFooterPush = $('.push').height(footerHeight);  
-    //     $('.wrap').css({'marginBottom':'-' + footerHeight + 'px'});
-    // });     
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
 
-    // $(window).resize();
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Senior Web Developer</h3>
+            <div class="subheading mb-3">Intelitec Solutions</div>
+            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">March 2013 - Present</span>
+          </div>
+        </div>
 
-    // $(window).bind("load resize", function() {    
-    //     var footerHeight = 0,
-    //         footerTop = 0,
-    //         $footer = $(".aw-footer");
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Web Developer</h3>
+            <div class="subheading mb-3">Intelitec Solutions</div>
+            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">December 2011 - March 2013</span>
+          </div>
+        </div>
 
-    //     positionFooter();
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Junior Web Designer</h3>
+            <div class="subheading mb-3">Shout! Media Productions</div>
+            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2010 - December 2011</span>
+          </div>
+        </div>
 
-    //     function positionFooter() {
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Web Design Intern</h3>
+            <div class="subheading mb-3">Shout! Media Productions</div>
+            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2008 - June 2010</span>
+          </div>
+        </div>
 
-    //         footerHeight = $footer.height();
-    //         footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
-    //         console.log(footerHeight, footerTop);
-    //         console.log($(document.body).height()+footerHeight, $(window).height());
+      </div>
 
-    //         if ( ($(document.body).height()+footerHeight) < $(window).height()) {
-    //             $footer.css({ position: "absolute" }).css({ top: footerTop });
-    //             console.log("Positioning absolute");
-    //         }
-    //         else {
-    //             $footer.css({ position: "static" });
-    //             console.log("Positioning static");
-    //         }
-    //     }
+    </section>
 
-    //     $(window).scroll(positionFooter).resize(positionFooter);
-    // });
-});
-</script>
+    <hr class="m-0">
 
-<script type="text/javascript" src="https://kirbygo.github.io/theme/js/d3.v3.min.js"></script>
-<script type="text/javascript" src="https://kirbygo.github.io/theme/js/colorbrewer.v1.min.js"></script>
-<script type="text/javascript" src="https://kirbygo.github.io/theme/js/timeline.js"></script>
-<script type="text/javascript" src="https://kirbygo.github.io/theme/js/pubStack.js"></script>
-<script type="text/javascript">timelineFromJson("Paired");</script>
-<script type="text/javascript">streamCsv("#stream", "Paired");</script>
-<script type="text/javascript">pubsBars("#stack", "Paired");</script>
-<script type="text/javascript">pubsList("#list");</script>
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">University of Colorado Boulder</h3>
+            <div class="subheading mb-3">Bachelor of Science</div>
+            <div>Computer Science - Web Development Track</div>
+            <p>GPA: 3.23</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2006 - May 2010</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">James Buchanan High School</h3>
+            <div class="subheading mb-3">Technology Magnet Program</div>
+            <p>GPA: 3.56</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2002 - May 2006</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-html5"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-css3-alt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-js-square"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-angular"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-react"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-node-js"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-sass"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-less"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-wordpress"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-gulp"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-grunt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-npm"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Workflow</div>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Mobile-First, Responsive Design</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Cross Browser Testing &amp; Debugging</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Cross Functional Teams</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Agile Development &amp; Scrum</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+      <div class="w-100">
+        <h2 class="mb-5">Interests</h2>
+        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+      <div class="w-100">
+        <h2 class="mb-5">Awards &amp; Certifications</h2>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Google Analytics Certified Developer</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Mobile Web Specialist - Google Certification</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            1<sup>st</sup>
+            Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            1<sup>st</sup>
+            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            2<sup>nd</sup>
+            Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            1<sup>st</sup>
+            Place - James Buchanan High School - Hackathon 2006</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            3<sup>rd</sup>
+            Place - James Buchanan High School - Hackathon 2005</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
 </body>
+
 </html>
